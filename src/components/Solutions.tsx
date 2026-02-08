@@ -1,4 +1,5 @@
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Cloud, Smartphone, Tablet, Monitor } from 'lucide-react';
 
@@ -7,7 +8,7 @@ export default function Solutions() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-950 overflow-hidden">
+    <section ref={ref} className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -23,10 +24,94 @@ export default function Solutions() {
           </p>
         </motion.div>
 
-        <div className="space-y-32">
-          {/* Feature 1 & 2 tetap sama seperti kode Anda sebelumnya... */}
-          {/* Saya langsung ke perbaikan Feature 3 agar fokus */}
+        <div className="space-y-24">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.2, duration: 0.8 }}
+            className="grid lg:grid-cols-2 gap-12 items-center"
+          >
+            <div>
+              <div className="inline-block px-4 py-2 bg-cyan-500/10 border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-semibold mb-4">
+                Feature #1
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4">
+                Alur Hardcover 14 Tahap
+              </h3>
+              <p className="text-lg text-slate-400 leading-relaxed mb-6">
+                Sistem workflow lengkap yang mencakup semua tahapan produksi hardcover, dari penerimaan order hingga quality control akhir. Setiap tahap terdokumentasi dengan detail.
+              </p>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2">✓</span>
+                  <span>Tracking progress real-time per tahapan</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2">✓</span>
+                  <span>Dokumentasi foto di setiap checkpoint</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2">✓</span>
+                  <span>Notifikasi otomatis untuk tahap selanjutnya</span>
+                </li>
+              </ul>
+            </div>
 
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-2xl blur-2xl"></div>
+              <div className="relative bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-800 p-4 shadow-2xl">
+                <img
+                  src="/tahapan.png"
+                  alt="Alur Hardcover 14 Tahap"
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ delay: 0.4, duration: 0.8 }}
+            className="grid lg:grid-cols-2 gap-12 items-center"
+          >
+            <div className="order-2 lg:order-1 relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl blur-2xl"></div>
+              <div className="relative bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-800 p-4 shadow-2xl">
+                <img
+                  src="/dependency.png"
+                  alt="SOP Anti-Skip System"
+                  className="w-full h-auto object-contain rounded-lg"
+                />
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2">
+              <div className="inline-block px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full text-purple-400 text-sm font-semibold mb-4">
+                Feature #2
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4">
+                SOP Anti-Skip (Dependency System)
+              </h3>
+              <p className="text-lg text-slate-400 leading-relaxed mb-6">
+                Sistem dependency yang memastikan setiap tahap produksi diselesaikan sesuai urutan. Tidak ada tahap yang bisa di-skip, menjamin kualitas output konsisten.
+              </p>
+              <ul className="space-y-3 text-slate-300">
+                <li className="flex items-start">
+                  <span className="text-purple-400 mr-2">✓</span>
+                  <span>Validasi otomatis sebelum lanjut ke tahap berikutnya</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-400 mr-2">✓</span>
+                  <span>Checklist wajib untuk quality assurance</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-purple-400 mr-2">✓</span>
+                  <span>Audit trail lengkap siapa mengerjakan apa</span>
+                </li>
+              </ul>
+            </div>
+          </motion.div>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
