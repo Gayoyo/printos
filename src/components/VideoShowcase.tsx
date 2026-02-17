@@ -16,7 +16,7 @@ export default function VideoShowcase() {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Lihat Printing OS Beraksi
+            Lihat PackFlow Beraksi
           </h2>
           <p className="text-lg text-slate-400">
             Demo lengkap sistem manajemen produksi untuk percetakan modern
