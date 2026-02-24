@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
           <div className="flex items-center space-x-2">
             <Printer className="w-8 h-8 text-cyan-400" />
-            <span className="text-xl font-bold text-white">Printing OS</span>
+            <span className="text-xl font-bold text-white">PackFlow</span>
           </div>
 
           <div className="flex items-center space-x-6">
@@ -34,7 +34,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-slate-800 text-center">
           <p className="text-slate-400 text-sm">
-            &copy; {new Date().getFullYear()} Printing OS. All rights reserved.
+            &copy; {new Date().getFullYear()} PackFlow. All rights reserved.
           </p>
         </div>
       </div>
